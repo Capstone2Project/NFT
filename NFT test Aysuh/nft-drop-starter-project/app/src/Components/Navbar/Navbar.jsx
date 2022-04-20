@@ -30,9 +30,9 @@ const Navbar = () => {
                 </div>
                 <div className="topright">
                     <div className={click ? 'nav-menu active' : 'nav-menu'}>
-                        <li><a href='#' > Home </a></li>
-                        <li><a href='#' > About </a></li>
-                        <li><a href='#' > Contact </a></li>
+                        <li><a href='#' ><span> Home </span></a></li>
+                        <li><a href='#' ><span> About </span></a></li>
+                        <li><a href='#' ><span> Contact </span></a></li>
                     </div>
                 </div>
                

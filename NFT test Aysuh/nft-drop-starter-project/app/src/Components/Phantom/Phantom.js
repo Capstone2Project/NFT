@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Phantom.css';
 import CandyMachine from './CandyMachine';
+import PWallet from '../../assets/phantom-logo-long.png'
 
 
 const App = () => {
@@ -61,10 +62,10 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
+    <div className="Phantom">
       <div className="container">
         <div className="header-container">
-          <p className="header">🍭 Candy Drop</p>
+          <a className="header" href='#'> <img src = {PWallet} height = '100px' alt = "Phatom"/></a>
           <p className="sub-text">NFT drop machine with fair mint</p>
           {/* Add the condition to show this only if we don't have a wallet address */}
           {!walletAddress && renderNotConnectedContainer()}

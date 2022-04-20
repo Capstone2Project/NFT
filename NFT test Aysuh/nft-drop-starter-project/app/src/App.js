@@ -5,8 +5,8 @@ import Navbar from './Components/Navbar/Navbar';
 function App() {
   return (
     <>
-        <Phantom />
         <Navbar />
+        <Phantom />
     </>
   );
 }
