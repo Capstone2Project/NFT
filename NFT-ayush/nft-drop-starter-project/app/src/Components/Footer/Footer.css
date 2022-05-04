@@ -1,0 +1,49 @@
+.footer {
+    width: 100%;
+    padding: 2rem 0;
+    background-color: rgb(20, 20, 20);
+}
+
+.footer .container {
+    margin-top: 20px;
+    margin-left: 250px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1.2rem;
+    color: rgb(97, 212, 142);
+}
+
+.footer .col {
+    margin: auto;
+}
+
+.footer h3 {
+    margin: auto;
+}
+
+.footer p {
+    color: white;
+    margin: .4rem 0
+}
+
+.footer .social {
+    text-align: center;
+}
+
+.footer .icon {
+    font-size: 2rem;
+    margin: 2rem 3rem;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 940px) {
+    .footer .container {
+        grid-template-columns: repeat(2,1fr);
+        gap: .5rem;
+    }
+
+    .footer .icon {
+        margin: 1rem;
+    }
+}
