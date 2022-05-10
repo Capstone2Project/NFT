@@ -1,7 +1,8 @@
 # Tagmatch Web Application
   
   ## Dependencies
-    * Node js LTE version
+    * Node js LTS version
+    * Since its a react app create-react-app should be upgrade if npm does not start.
 
     * Inside app folder
       * npm i dotenv
