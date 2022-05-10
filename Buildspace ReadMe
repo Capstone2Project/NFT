@@ -1,0 +1,61 @@
+
+
+Dependencies
+•	Npm I react-icons
+•	Npm I react-scripts
+•	Install Phantom Wallet Extension in Chrome
+
+•	Inside app folder (Solana dependencies)
+o	Solana install documentation link
+		https://docs.solana.com/cli/install-solana-cli-tools
+o	yarn install
+o	yarn add @solana/web3.js
+o	yarn add @solana/spl-token
+
+Running the application
+•	npm run start (Note: Tested on Google Chrome)
+
+Minting and Uploading Ticket
+For this process user need to upload and verify upload from the terminal. Creating assets and metadata for the NFTs can be found on "Metaplex Readme File".
+
+**Process for miniting NFTs Token after connecting wallet**
+  - Clone metaplex file outside app folder.
+
+    git clone https://github.com/metaplex-foundation/metaplex.git ~/metaplex
+
+  * Terminal Code: 
+    - yarn install --cwd ~/metaplex/js/
+    - solana-keygen new --outfile ~/.config/solana/devnet.json
+    - solana config set --keypair ~/.config/solana/devnet.json
+    - solana config set --url devnet
+    - ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts --version
+    - solana config get
+    - solana airdrop 2
+    - solana balance
+
+    - Create assets folder outside app folder. Creating metadata for the assets can be found on Metaplex documentation. 
+    - Inside metadata json update your address with phantom wallet address.
+    - Create config file in root folder. Config file can be obtained from Metaplex folder in github. In solTresauryAccount: Add your solana wallet address. It can be obtained from using "solana address" in terminal.
+    - Inside config number, it should be the amount of NFTs you are minting. If you are minting 1 NFT use 1 if 2 use 2 and so on.
+
+**Environment setup for Candy machine**
+    - Edit the .env file presented in the folder.
+    - Update Candy Machine ID. ID can be found on .cache/devnet-temp
+
+  * Upload and verify your NFTs
+    - ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts verify_assets "./assets"(path of assets. Do not use "")
+    
+    - ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts upload -e devnet -k ~/.config/solana/devnet.json -cp config.json
+    "./assets"(path of assets (do not use "")) 
+
+    - ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts verify_upload -e devnet -k ~/.config/solana/devnet.json 
+
+    - There should be a message "Ready to deploy"
+
+    - Refresh the web page and Mint the NFTs. Approve in the wallet. You can see the uploaded NFTs in phatom wallet collectibles.
+
+
+Troubleshoot:
+•	NPM not correctly installed (Depends on situation Update/remove and install/add addtional dependency)
+•	Uploading assets might fail (Make sure the images and metadata are in the same folder and the phantom wallet address is correct and make sure you have Sol Balance)
+•	Minting Ticket fail (Make sure you have your phantom wallet on devnet and the goLiveDate on the config file is set to the time you’re minting)
