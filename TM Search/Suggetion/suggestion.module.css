@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.autocomBox {
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+    max-height: 280px;
+    overflow-y: auto;
+    background: beige;
+    border-radius: 10px;
+
+}
+
+.autocomBox li {
+    list-style: none;
+    padding: 8px 12px;
+    width: 100%;
+    overflow: hidden;
+    cursor: default;
+    border-radius: 3px;
+}
+
+.autocomBox li:hover {
+    background: #efefef;
+}
