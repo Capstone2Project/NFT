@@ -10,7 +10,7 @@
   * Upload and mint NFTs by user
   * Phatom wallet connection
 
-  # Tagmatch Web Application
+  # Tagmatch Web Application (Full version check Tagmatch README.md)
 
     * Both project (Metaplex & Buildspace) is modified and implemented in the applicaiton
     * Search event using Ticketmaster is implemented.
